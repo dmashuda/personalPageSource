@@ -6,8 +6,112 @@
     <description>Recent content on Daniel Mashuda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Daniel Mashuda © 2015 </copyright>
+    <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="dmashuda.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About Me</title>
+      <link>/dmashuda.github.io/about/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/about/</guid>
+      <description>
+
+&lt;p&gt;I enjoy learning about programming languages, technologies, and design paradigms. I believe that a good Software Engineer knows the strengths/weaknesses of the these things and picks the right tools for the job. When the only thing that you have is a hammer, everything looks like a nail.&lt;/p&gt;
+
+&lt;h4 id=&#34;interests:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Interests&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Design Patterns&lt;/li&gt;
+&lt;li&gt;Concurrency&lt;/li&gt;
+&lt;li&gt;Software Engineering Processes and Methodologies&lt;/li&gt;
+&lt;li&gt;Web Application Development&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://golang.org&#34;&gt;Go&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://rubyonrails.org/&#34;&gt;Rails&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://developer.android.com/index.html&#34;&gt;Android&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;education:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Education&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Bachelor of Science&lt;/strong&gt; -&amp;gt; &lt;a href=&#34;http://ycp.edu&#34;&gt;York College of Pennsylvania&lt;/a&gt; May 2016
+
+&lt;ul&gt;
+&lt;li&gt;Computer Science Major&lt;/li&gt;
+&lt;li&gt;Mathematics Minor&lt;/li&gt;
+&lt;li&gt;3.81 GPA&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;places-i-ve-worked:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Places I&amp;rsquo;ve worked&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt; -&amp;gt; &lt;a href=&#34;http://www.dataforma.com&#34;&gt;Dataforma Inc.&lt;/a&gt; May 2014-Present&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Go-Imgur</title>
+      <link>/dmashuda.github.io/project/go-imgur/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/project/go-imgur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lighthouse</title>
+      <link>/dmashuda.github.io/project/lighthouse/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/project/lighthouse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Network Scanner</title>
+      <link>/dmashuda.github.io/project/networkscanner/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/project/networkscanner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photo Share</title>
+      <link>/dmashuda.github.io/project/photoshare/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/project/photoshare/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo: First Impressions</title>
+      <link>/dmashuda.github.io/post/hugo/</link>
+      <pubDate>Sat, 30 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/post/hugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is a static site generator. It is very flexible and
+members of the community contribute high quality themes so that those of us
+without a creative bone in our body can generate websites with high visual quality&lt;/p&gt;
+
+&lt;h4 id=&#34;why-a-static-site-generator:32ab7241d48fcc174c877413a917f8cf&#34;&gt;Why a static site generator?&lt;/h4&gt;
+
+&lt;p&gt;A static site generator has the benefits of a view templating system, but the
+cost of assembly for the template is completed before the site is deployed. This
+allows for effective static hosting and no cost caching. One caveat of static site generators
+is that the site must be re-generated after every change.&lt;/p&gt;
+
+&lt;p&gt;For the case of my website, which i change infrequently, hugo is a perfect fit.
+I do not have to have a database that I have to manage. I do not have an application
+server that I manage. All of my content for the pages on my site are written in markdown,
+so formatting is simple. I statically host my site on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; for free.&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

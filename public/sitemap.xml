@@ -3,7 +3,38 @@
   
   <url>
     <loc>/dmashuda.github.io/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/about/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/project/go-imgur/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/project/lighthouse/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/project/networkscanner/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/project/photoshare/</loc>
+    <lastmod>2016-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/dmashuda.github.io/post/hugo/</loc>
+    <lastmod>2016-01-30T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
