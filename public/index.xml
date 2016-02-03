@@ -52,6 +52,59 @@
     </item>
     
     <item>
+      <title>Game Server</title>
+      <link>/dmashuda.github.io/project/game-server/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/dmashuda.github.io/project/game-server/</guid>
+      <description>
+
+&lt;p&gt;Car combat was designed and built for CS481(Senior Software Project). Car combat
+is a real-time multiplayer game. Car combat uses an architecture with
+an authoritative server. Each client connects to the server and communicates over
+a UDP socket. Each client streams commands to the server, and the server broadcasts
+the current State of the Game to all of the connected clients. The commands and
+GameState are described below:
+&lt;img src=&#34;https://raw.githubusercontent.com/awesomegroupidunno/senior-design/master/shared.png&#34; alt=&#34;alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The game server runs its udp receiver on 2 goroutines, one for sending GameStates
+ and one for receiving game commands. The main game loop in the GameManager
+ is run on its own goroutine. Each Game command has a corresponding Command
+ Processor which mutates the GameState for its corresponding command.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/awesomegroupidunno/senior-design/master/server.png&#34; alt=&#34;alt text&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;project-information:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Project Information&lt;/h3&gt;
+
+&lt;h6 id=&#34;project-contributers:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Project Contributers:&lt;/h6&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://danmashuda.com/about&#34;&gt;Daniel Mashuda&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Austin Decker&lt;/li&gt;
+&lt;li&gt;Austin Forry&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h6 id=&#34;install-dependencies:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Install dependencies:&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;go get .
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&#34;run-unit-tests:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Run Unit Tests:&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;go test -v ./...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h6 id=&#34;run-server:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Run Server:&lt;/h6&gt;
+
+&lt;pre&gt;&lt;code&gt;go run server.go
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By default, the server listens on port: 10001, this can be configured in the server.go file
+Car combat client implementation is located:  &lt;a href=&#34;https://github.com/awesomegroupidunno/game-client&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Go-Imgur</title>
       <link>/dmashuda.github.io/project/go-imgur/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>

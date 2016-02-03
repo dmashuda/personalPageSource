@@ -2,7 +2,7 @@
 title: "Photo Share"
 date: "2016-02-01"
 description: "This was a cool piece of code that I wrote"
-cardbackground: "#266638"
+cardbackground: "#AD1457"
 repo: "https://github.com/dmashuda/photoShare"
 "author":
   description: "Software Engineer"

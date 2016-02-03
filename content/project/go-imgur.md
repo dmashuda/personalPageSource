@@ -2,7 +2,7 @@
 title: "Go-Imgur"
 date: "2016-02-01"
 description: "A basic imgur api client for go"
-cardbackground: "#266638"
+cardbackground: "#1565C0"
 repo: "https://github.com/dmashuda/go-imgur"
 "author":
   description: "Software Engineer"

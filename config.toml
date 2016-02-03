@@ -16,3 +16,5 @@ MetaDataFormat = "yaml"
     github = "https://github.com/dmashuda/"
     copyrightyear = "2015"
     frontpageposts = 6 #number of post cards to display on frontpage
+
+		#http://materialuicolors.co/ Level 800

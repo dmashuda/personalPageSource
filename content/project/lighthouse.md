@@ -2,7 +2,7 @@
 title: "Lighthouse"
 date: "2016-02-01"
 description: "A lightweight error reporting service"
-cardbackground: "#266638"
+cardbackground: "#558B2F"
 repo: "https://github.com/dmashuda/lighthouse"
 "author":
   description: "Software Engineer"

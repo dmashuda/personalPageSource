@@ -14,8 +14,7 @@ blurb: "Software Engineer"
 recentposts: 5
 recentprojects: 5
 photo: "/images/avatar.jpg"
-cardheaderimage: "/images/default.jpg" #optional: default solid color if unset
-cardbackground: "#263238" #optional: card background color; only shows when no image specified
+cardbackground: "#424242" #optional: card background color; only shows when no image specified
 ---
 
 I enjoy learning about programming languages, technologies, and design paradigms. I believe that a good Software Engineer knows the strengths/weaknesses of the these things and picks the right tools for the job. When the only thing that you have is a hammer, everything looks like a nail.

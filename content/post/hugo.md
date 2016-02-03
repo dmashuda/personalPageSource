@@ -7,9 +7,7 @@ categories:
 tags:
     - "hugo"
     - "opinion"
-cardthumbimage: "/images/default.jpg" #optional: default solid color if unset
-cardheaderimage: "/images/default.jpg" #optional: default solid color if unset
-cardbackground: "#263238" #optional: card background color; only shows when no image specified
+cardbackground: "#0277BD" #optional: card background color; only shows when no image specified
 #cardtitlecolor: "#fafafa" #optional: can be changed to make text visible over card image
 "author":
     name: "Daniel Mashuda"
