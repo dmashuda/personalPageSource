@@ -31,7 +31,7 @@ Open to pull requests
  - If there is an issue open for the feature/improvement/bugfix please mark as a work in progress
  - if there is not an issue for feature/improvement/bugfix please create one and mark as a work in progress
 
-Configuration
+### Configuration
  ----
  - For Storing Photos in an S3 Bucket
      - AWS_ACCESS_KEY_ID

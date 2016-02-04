@@ -2,19 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Daniel Mashuda</title>
-    <link>dmashuda.github.io/</link>
+    <link>danmashuda.com/</link>
     <description>Recent content on Daniel Mashuda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Feb 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="dmashuda.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="danmashuda.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Lighthouse</title>
+      <link>/danmashuda.com/project/lighthouse/</link>
+      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/danmashuda.com/project/lighthouse/</guid>
+      <description>
+
+&lt;h1 id=&#34;currently-under-developement:bb0a7fe137e1b558c7c0c642a0c55d57&#34;&gt;Currently Under Developement&lt;/h1&gt;
+
+&lt;p&gt;A microservice for logging errors and other application events.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>About Me</title>
-      <link>/dmashuda.github.io/about/</link>
+      <link>/danmashuda.com/about/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>/dmashuda.github.io/about/</guid>
+      <guid>/danmashuda.com/about/</guid>
       <description>
 
 &lt;p&gt;I enjoy learning about programming languages, technologies, and design paradigms. I believe that a good Software Engineer knows the strengths/weaknesses of the these things and picks the right tools for the job. When the only thing that you have is a hammer, everything looks like a nail.&lt;/p&gt;
@@ -52,11 +66,124 @@
     </item>
     
     <item>
-      <title>Game Server</title>
-      <link>/dmashuda.github.io/project/game-server/</link>
+      <title>Go-Imgur</title>
+      <link>/danmashuda.com/project/go-imgur/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>/dmashuda.github.io/project/game-server/</guid>
+      <guid>/danmashuda.com/project/go-imgur/</guid>
+      <description>
+
+&lt;p&gt;A basic api client for &lt;a href=&#34;https://api.imgur.com/&#34;&gt;imgur&lt;/a&gt;. Currently I have only implemented the features of the imgur api that I use for other projects.&lt;/p&gt;
+
+&lt;p&gt;If you would like another piece of functionality implemented, open an &lt;a href=&#34;https://github.com/dmashuda/go-imgur/issues/new&#34;&gt;issue&lt;/a&gt; or implement it yourself and submit a pull request&lt;/p&gt;
+
+&lt;h2 id=&#34;installation:17169e550c700efc4413d99d79848bed&#34;&gt;Installation:&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;go get github.com/dmashuda/go-imgur
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example-usage:17169e550c700efc4413d99d79848bed&#34;&gt;Example Usage:&lt;/h2&gt;
+
+&lt;h4 id=&#34;creating-a-client:17169e550c700efc4413d99d79848bed&#34;&gt;Creating a Client:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;client := imgur.NewClient(clientID)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;em&gt;clientID is issued by imgur on a per application basis&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;retrieving-album-information:17169e550c700efc4413d99d79848bed&#34;&gt;Retrieving album information:&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code&gt;aww, err := client.GetAlbum(&amp;quot;/gallery/r/CorgiGifs&amp;quot;, 0, 20)
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hugo: First Impressions</title>
+      <link>/danmashuda.com/post/hugo/</link>
+      <pubDate>Sat, 30 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/danmashuda.com/post/hugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is a static site generator. It is very flexible and
+members of the community contribute high quality themes so that those of us
+without a creative bone in our body can generate websites with high visual quality&lt;/p&gt;
+
+&lt;h4 id=&#34;why-a-static-site-generator:32ab7241d48fcc174c877413a917f8cf&#34;&gt;Why a static site generator?&lt;/h4&gt;
+
+&lt;p&gt;A static site generator has the benefits of a view templating system, but the
+cost of assembly for the template is completed before the site is deployed. This
+allows for effective static hosting and no cost caching. One caveat of static site generators
+is that the site must be re-generated after every change.&lt;/p&gt;
+
+&lt;p&gt;For the case of my website, which i change infrequently, hugo is a perfect fit.
+I do not have to have a database that I have to manage. I do not have an application
+server that I manage. All of my content for the pages on my site are written in markdown,
+so formatting is simple. I statically host my site on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; for free.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Photo Share</title>
+      <link>/danmashuda.com/project/photoshare/</link>
+      <pubDate>Sat, 16 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/danmashuda.com/project/photoshare/</guid>
+      <description>
+
+&lt;p&gt;PhotoShare is a generic photo sharing website that I built for sharing pictures with my friends and family so that I can be in control of our data and our pictures rather than relying on Google/Facebook/others.Fairly generic and basic, it supports uploading and tagging photo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Open to feature requests
+ - Just put in an issue and label it a feature request
+ - If you want to implement the feature, then please mark work in progress&lt;/p&gt;
+
+&lt;p&gt;Open to pull requests
+ - If there is an issue open for the feature/improvement/bugfix please mark as a work in progress
+ - if there is not an issue for feature/improvement/bugfix please create one and mark as a work in progress&lt;/p&gt;
+
+&lt;h3 id=&#34;configuration:f0eb590cd88eec609acccb193a1e59ef&#34;&gt;Configuration&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;For Storing Photos in an S3 Bucket&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;AWS_ACCESS_KEY_ID&lt;/li&gt;
+&lt;li&gt;AWS_SECRET_ACCESS_KEY&lt;/li&gt;
+&lt;li&gt;S3_BUCKET_NAME&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mail Configuration with a gmail account&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GMAIL_DOMAIN&lt;/li&gt;
+&lt;li&gt;GMAIL_PASSWORD&lt;/li&gt;
+&lt;li&gt;GMAIL_USERNAME&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;General Rails Configuration&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;RACK_ENV&lt;/li&gt;
+&lt;li&gt;SECRET_KEY_BASE&lt;/li&gt;
+&lt;li&gt;DATABASE_URL&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Feel free to drop me a line: dmashuda@ycp.edu&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Game Server</title>
+      <link>/danmashuda.com/project/game-server/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/danmashuda.com/project/game-server/</guid>
       <description>
 
 &lt;p&gt;Car combat was designed and built for CS481(Senior Software Project). Car combat
@@ -105,64 +232,16 @@ Car combat client implementation is located:  &lt;a href=&#34;https://github.com
     </item>
     
     <item>
-      <title>Go-Imgur</title>
-      <link>/dmashuda.github.io/project/go-imgur/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/dmashuda.github.io/project/go-imgur/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lighthouse</title>
-      <link>/dmashuda.github.io/project/lighthouse/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/dmashuda.github.io/project/lighthouse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Network Scanner</title>
-      <link>/dmashuda.github.io/project/networkscanner/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <link>/danmashuda.com/project/networkscanner/</link>
+      <pubDate>Thu, 02 Jul 2015 00:00:00 +0000</pubDate>
       
-      <guid>/dmashuda.github.io/project/networkscanner/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photo Share</title>
-      <link>/dmashuda.github.io/project/photoshare/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/dmashuda.github.io/project/photoshare/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo: First Impressions</title>
-      <link>/dmashuda.github.io/post/hugo/</link>
-      <pubDate>Sat, 30 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/dmashuda.github.io/post/hugo/</guid>
-      <description>
+      <guid>/danmashuda.com/project/networkscanner/</guid>
+      <description>&lt;p&gt;A network scanner for android. Uses the new UI components Cardview and Recyclview. Displays the IP, Host Name, and MAC address for all of the network devices on the network&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is a static site generator. It is very flexible and
-members of the community contribute high quality themes so that those of us
-without a creative bone in our body can generate websites with high visual quality&lt;/p&gt;
+&lt;p&gt;published on Google Play &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.unwind.networkmonitor&amp;amp;hl=en&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;why-a-static-site-generator:32ab7241d48fcc174c877413a917f8cf&#34;&gt;Why a static site generator?&lt;/h4&gt;
-
-&lt;p&gt;A static site generator has the benefits of a view templating system, but the
-cost of assembly for the template is completed before the site is deployed. This
-allows for effective static hosting and no cost caching. One caveat of static site generators
-is that the site must be re-generated after every change.&lt;/p&gt;
-
-&lt;p&gt;For the case of my website, which i change infrequently, hugo is a perfect fit.
-I do not have to have a database that I have to manage. I do not have an application
-server that I manage. All of my content for the pages on my site are written in markdown,
-so formatting is simple. I statically host my site on &lt;a href=&#34;https://pages.github.com/&#34;&gt;github pages&lt;/a&gt; for free.&lt;/p&gt;
+&lt;p&gt;Feel free to fork, improve, and use. In the spirit of open source, submit pull requests! I will do my best to communicate and merge them.&lt;/p&gt;
 </description>
     </item>
     
