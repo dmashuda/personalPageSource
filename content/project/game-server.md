@@ -1,7 +1,7 @@
 ---
 title: "Game Server"
-date: "2016-02-01"
-description: "A basic imgur api client for go"
+date: "2016-01-01"
+description: "A real time multiplayer game server"
 cardbackground: "#C62828"
 repo: "https://github.com/awesomegroupidunno/game-server/"
 "author":

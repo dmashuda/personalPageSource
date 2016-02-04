@@ -1,6 +1,6 @@
 ---
 title: "Lighthouse"
-date: "2016-02-01"
+date: "2016-02-03"
 description: "A lightweight error reporting service"
 cardbackground: "#558B2F"
 repo: "https://github.com/dmashuda/lighthouse"
@@ -18,3 +18,8 @@ tags:
   - "golang"
 #titlecolor: "#ffab40" #ffab40
 ---
+
+# Currently Under Developement
+
+
+A microservice for logging errors and other application events.
