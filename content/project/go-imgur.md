@@ -25,14 +25,19 @@ A basic api client for [imgur](https://api.imgur.com/). Currently I have only im
 If you would like another piece of functionality implemented, open an [issue](https://github.com/dmashuda/go-imgur/issues/new) or implement it yourself and submit a pull request
 
 ## Installation:
-    go get github.com/dmashuda/go-imgur
+{{< highlight go >}}
+    go get github.com/dmashuda/go-imgur     
+ {{< /highlight >}}
+
 
 ## Example Usage:
 #### Creating a Client:
-
-    client := imgur.NewClient(clientID)
+    {{< highlight go >}}
+    client := imgur.NewClient(clientID)   
+    {{< /highlight >}}
 *clientID is issued by imgur on a per application basis*
 
 #### Retrieving album information:
-
-    aww, err := client.GetAlbum("/gallery/r/CorgiGifs", 0, 20)
+{{< highlight go >}}
+    aww, err := client.GetAlbum("/gallery/r/CorgiGifs", 0, 20)    
+    {{< /highlight >}}

@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Daniel Mashuda"
 theme = "HugoMDL"
 MetaDataFormat = "yaml"
+pygmentsuseclasses = false
 [permalinks]
 	page = "/:title/"
 	about = "/:filename/"

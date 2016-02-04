@@ -43,13 +43,22 @@ The game server runs its udp receiver on 2 goroutines, one for sending GameState
  - Austin Forry
 
 ###### Install dependencies:
-    go get .
+{{< highlight go >}}
+    go get .    
+{{< /highlight >}}
+
 
 ###### Run Unit Tests:
-    go test -v ./...
+{{< highlight go >}}
+    go test -v ./...  
+{{< /highlight >}}
+
 
 ###### Run Server:
-    go run server.go
+{{< highlight go >}}
+    go run server.go  
+    {{< /highlight >}}
+
 
 By default, the server listens on port: 10001, this can be configured in the server.go file
 Car combat client implementation is located:  [here](https://github.com/awesomegroupidunno/game-client)
