@@ -1,4 +1,4 @@
-baseurl = "danmashuda.com"
+baseurl = "http://danmashuda.com"
 languageCode = "en-us"
 title = "Daniel Mashuda"
 theme = "HugoMDL"
