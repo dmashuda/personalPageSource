@@ -7,7 +7,6 @@ layout: "single"
 categories:
     - "bio"
     - "about"
-    - "meta"
 tags:
     - "bio"
 blurb: "Software Engineer"

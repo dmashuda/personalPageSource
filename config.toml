@@ -1,21 +1,20 @@
 baseurl = "http://danmashuda.com"
 languageCode = "en-us"
 title = "Daniel Mashuda"
-theme = "HugoMDL"
+theme = "material-design"
 MetaDataFormat = "yaml"
-pygmentsuseclasses = false
-[permalinks]
-	page = "/:title/"
-	about = "/:filename/"
+
 [params]
     name = "Daniel Mashuda"
-    description = "" #meta description
+    description = "Thoughts of a Software Engineer" #meta description
 		background = "/images/background.jpg"
     image = "/images/avatar.jpg" #for frontpage profile card
     website = "danmashuda.com"
     email = "dmashuda@ycp.edu"
-    github = "https://github.com/dmashuda/"
+    github = "dmashuda"
+		linkedin = "daniel-mashuda-6b857224"
     copyrightyear = "2015"
     frontpageposts = 6 #number of post cards to display on frontpage
 
-		#http://materialuicolors.co/ Level 800
+[permalinks]
+  post = "/:year/:month/:day/:title/" # optional

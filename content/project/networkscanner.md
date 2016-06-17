@@ -2,14 +2,6 @@
 title: "Network Scanner"
 date: "2015-07-02"
 description: "A network scanner for android"
-cardbackground: "#D84315"
-repo: "https://github.com/dmashuda/networkScanner"
-"author":
-  description: "Software Engineer"
-  email: "dmashuda@ycp.edu"
-  github: "https://github.com/dmashuda/"
-  name: "Daniel Mashuda"
-  website: "danmashuda.com"
 categories:
   - "project"
 tags:

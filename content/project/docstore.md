@@ -2,14 +2,6 @@
 title: "Docstore"
 date: "2016-06-16"
 description: "Document(file) Storage abstraction for golang"
-cardbackground: "#1565C0"
-repo: "https://github.com/dmashuda/docstore"
-"author":
-  description: "Software Engineer"
-  email: "dmashuda@ycp.edu"
-  github: "https://github.com/dmashuda/"
-  name: "Daniel Mashuda"
-  website: "danmashuda.com"
 categories:
   - "project"
 tags:
@@ -19,17 +11,15 @@ tags:
   - "io"
 #titlecolor: "#ffab40" #ffab40
 ---
-
-# Docstore
 Document(file) Storage abstraction for golang
 
 
 ## Overview
- - Single Basic Interface for storing and retrieving documents
- - Store and retrieve documents based on keys
- - Implementations
-  - Amazon S3
-  - File system
+ 1. Single Basic Interface for storing and retrieving documents
+ 2. Store and retrieve documents based on keys
+ 3. Implementations
+      1. Amazon S3
+      - File system
 
 ## Getting Started
 

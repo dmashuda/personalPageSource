@@ -17,22 +17,20 @@
       <guid>http://danmashuda.com/project/docstore/</guid>
       <description>
 
-&lt;h1 id=&#34;docstore&#34;&gt;Docstore&lt;/h1&gt;
-
 &lt;p&gt;Document(file) Storage abstraction for golang&lt;/p&gt;
 
 &lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;Single Basic Interface for storing and retrieving documents&lt;/li&gt;
 &lt;li&gt;Store and retrieve documents based on keys&lt;/li&gt;
 &lt;li&gt;Implementations
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;Amazon S3&lt;/li&gt;
 &lt;li&gt;File system&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
 
@@ -107,20 +105,6 @@ numBytes, err := io.Copy(newFile, getObj.Body)
     </item>
     
     <item>
-      <title>Lighthouse</title>
-      <link>http://danmashuda.com/project/lighthouse/</link>
-      <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://danmashuda.com/project/lighthouse/</guid>
-      <description>
-
-&lt;h1 id=&#34;currently-under-developement&#34;&gt;Currently Under Developement&lt;/h1&gt;
-
-&lt;p&gt;A microservice for logging errors and other application events.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>About Me</title>
       <link>http://danmashuda.com/about/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
@@ -176,35 +160,31 @@ numBytes, err := io.Copy(newFile, getObj.Body)
 
 &lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
 
-
-    go get github.com/dmashuda/go-imgur     
- 
+&lt;pre&gt;&lt;code&gt;    go get github.com/dmashuda/go-imgur     
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;example-usage&#34;&gt;Example Usage:&lt;/h2&gt;
 
 &lt;h4 id=&#34;creating-a-client&#34;&gt;Creating a Client:&lt;/h4&gt;
 
-&lt;pre&gt;&lt;code&gt;
-    client := imgur.NewClient(clientID)   
-    
+&lt;pre&gt;&lt;code&gt;    client := imgur.NewClient(clientID)   
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;clientID is issued by imgur on a per application basis&lt;/em&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;retrieving-album-information&#34;&gt;Retrieving album information:&lt;/h4&gt;
 
-
-    aww, err := client.GetAlbum(&#34;/gallery/r/CorgiGifs&#34;, 0, 20)    
-    
+&lt;pre&gt;&lt;code&gt;    aww, err := client.GetAlbum(&amp;quot;/gallery/r/CorgiGifs&amp;quot;, 0, 20)    
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
     <item>
       <title>Hugo: First Impressions</title>
-      <link>http://danmashuda.com/post/hugo/</link>
+      <link>http://danmashuda.com/2016/01/30/hugo-first-impressions/</link>
       <pubDate>Sat, 30 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://danmashuda.com/post/hugo/</guid>
+      <guid>http://danmashuda.com/2016/01/30/hugo-first-impressions/</guid>
       <description>
 
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; is a static site generator. It is very flexible and
@@ -238,8 +218,8 @@ so formatting is simple. I statically host my site on &lt;a href=&#34;https://pa
 &lt;hr /&gt;
 
 &lt;p&gt;Open to feature requests
- - Just put in an issue and label it a feature request
- - If you want to implement the feature, then please mark work in progress&lt;/p&gt;
+  - Just put in an issue and label it a feature request
+  * If you want to implement the feature, then please mark work in progress&lt;/p&gt;
 
 &lt;p&gt;Open to pull requests
  - If there is an issue open for the feature/improvement/bugfix please mark as a work in progress
@@ -252,27 +232,27 @@ so formatting is simple. I statically host my site on &lt;a href=&#34;https://pa
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;For Storing Photos in an S3 Bucket&lt;/p&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;AWS_ACCESS_KEY_ID&lt;/li&gt;
 &lt;li&gt;AWS_SECRET_ACCESS_KEY&lt;/li&gt;
 &lt;li&gt;S3_BUCKET_NAME&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Mail Configuration with a gmail account&lt;/p&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;GMAIL_DOMAIN&lt;/li&gt;
 &lt;li&gt;GMAIL_PASSWORD&lt;/li&gt;
 &lt;li&gt;GMAIL_USERNAME&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;General Rails Configuration&lt;/p&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;RACK_ENV&lt;/li&gt;
 &lt;li&gt;SECRET_KEY_BASE&lt;/li&gt;
 &lt;li&gt;DATABASE_URL&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Feel free to drop me a line: dmashuda@ycp.edu&lt;/p&gt;
@@ -314,21 +294,18 @@ GameState are described below:
 
 &lt;h6 id=&#34;install-dependencies&#34;&gt;Install dependencies:&lt;/h6&gt;
 
-
-    go get .    
-
+&lt;pre&gt;&lt;code&gt;    go get .    
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;run-unit-tests&#34;&gt;Run Unit Tests:&lt;/h6&gt;
 
-
-    go test -v ./...  
-
+&lt;pre&gt;&lt;code&gt;    go test -v ./...  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h6 id=&#34;run-server&#34;&gt;Run Server:&lt;/h6&gt;
 
-
-    go run server.go  
-    
+&lt;pre&gt;&lt;code&gt;    go run server.go  
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;By default, the server listens on port: 10001, this can be configured in the server.go file
 Car combat client implementation is located:  &lt;a href=&#34;https://github.com/awesomegroupidunno/game-client&#34;&gt;here&lt;/a&gt;&lt;/p&gt;

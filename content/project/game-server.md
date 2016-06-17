@@ -2,14 +2,6 @@
 title: "Game Server"
 date: "2016-01-01"
 description: "A real time multiplayer game server"
-cardbackground: "#C62828"
-repo: "https://github.com/awesomegroupidunno/game-server/"
-"author":
-  description: "Software Engineer"
-  email: "dmashuda@ycp.edu"
-  github: "https://github.com/dmashuda/"
-  name: "Daniel Mashuda"
-  website: "danmashuda.com"
 categories:
   - "project"
 tags:
@@ -43,21 +35,21 @@ The game server runs its udp receiver on 2 goroutines, one for sending GameState
  - Austin Forry
 
 ###### Install dependencies:
-{{< highlight go >}}
+```
     go get .    
-{{< /highlight >}}
+```
 
 
 ###### Run Unit Tests:
-{{< highlight go >}}
+```
     go test -v ./...  
-{{< /highlight >}}
+```
 
 
 ###### Run Server:
-{{< highlight go >}}
+```
     go run server.go  
-    {{< /highlight >}}
+```
 
 
 By default, the server listens on port: 10001, this can be configured in the server.go file
