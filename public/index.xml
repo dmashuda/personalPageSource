@@ -6,8 +6,105 @@
     <description>Recent content on Daniel Mashuda</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Feb 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://danmashuda.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Docstore</title>
+      <link>http://danmashuda.com/project/docstore/</link>
+      <pubDate>Thu, 16 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://danmashuda.com/project/docstore/</guid>
+      <description>
+
+&lt;h1 id=&#34;docstore&#34;&gt;Docstore&lt;/h1&gt;
+
+&lt;p&gt;Document(file) Storage abstraction for golang&lt;/p&gt;
+
+&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Single Basic Interface for storing and retrieving documents&lt;/li&gt;
+&lt;li&gt;Store and retrieve documents based on keys&lt;/li&gt;
+&lt;li&gt;Implementations
+
+&lt;ul&gt;
+&lt;li&gt;Amazon S3&lt;/li&gt;
+&lt;li&gt;File system&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+
+&lt;p&gt;Installing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; go get github.com/dmashuda/docstore
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;configuring-credentials-for-aws&#34;&gt;Configuring Credentials For AWS&lt;/h2&gt;
+
+&lt;p&gt;Before using the SDK, ensure that you&amp;rsquo;ve configured credentials. The best
+way to configure credentials on a development machine is to use the
+&lt;code&gt;~/.aws/credentials&lt;/code&gt; file, which might look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[default]
+aws_access_key_id = AKID1234567890
+aws_secret_access_key = MY-SECRET-KEY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can learn more about the credentials file from this
+&lt;a href=&#34;http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs&#34;&gt;blog post&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Alternatively, you can set the following environment variables:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;AWS_ACCESS_KEY_ID=AKID1234567890
+AWS_SECRET_ACCESS_KEY=MY-SECRET-KEY
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;example&#34;&gt;Example&lt;/h2&gt;
+
+&lt;h3 id=&#34;storage-creation&#34;&gt;Storage Creation&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;// Creates new Storer backed by an S3 Bucket
+var storage docstore.Storer = docstore.BasicAws(&amp;quot;us-east-1&amp;quot;, &amp;quot;dmashuda-dev&amp;quot;)
+
+// Creates new Storer backed by a file system
+var storage docstore.Storer = docstore.NewFileStore(&amp;quot;/Volumes/storage&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;storing-a-document&#34;&gt;Storing a document&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;// Prepares putObj with ioreader and Identifier
+file, _ := os.Open(fileName)
+putObj := docstore.CreateObj{
+  Identifier: fileName,
+  Body:       file,
+}
+//store the photo
+//errors ignored
+id, err := storage.Put(putObj)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;retrieving-a-document&#34;&gt;Retrieving a document&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;getObj, _ := storage.Get(fileName)
+
+newFile := os.Create(&amp;quot;newFile.jpg&amp;quot;)
+defer newFile.Close()
+numBytes, err := io.Copy(newFile, getObj.Body)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;contributing&#34;&gt;Contributing&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dmashuda/docstore/graphs/contributors&#34;&gt;https://github.com/dmashuda/docstore/graphs/contributors&lt;/a&gt;
+ - Pull requests welcome
+ - Feel free to add new docstore.Storer Implementations&lt;/p&gt;
+
+&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
+
+&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/jinzhu/gorm/blob/master/License&#34;&gt;MIT License&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Lighthouse</title>
@@ -17,7 +114,7 @@
       <guid>http://danmashuda.com/project/lighthouse/</guid>
       <description>
 
-&lt;h1 id=&#34;currently-under-developement:bb0a7fe137e1b558c7c0c642a0c55d57&#34;&gt;Currently Under Developement&lt;/h1&gt;
+&lt;h1 id=&#34;currently-under-developement&#34;&gt;Currently Under Developement&lt;/h1&gt;
 
 &lt;p&gt;A microservice for logging errors and other application events.&lt;/p&gt;
 </description>
@@ -33,7 +130,7 @@
 
 &lt;p&gt;I enjoy learning about programming languages, technologies, and design paradigms. I believe that a good Software Engineer knows the strengths/weaknesses of the these things and picks the right tools for the job. When the only thing that you have is a hammer, everything looks like a nail.&lt;/p&gt;
 
-&lt;h4 id=&#34;interests:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Interests&lt;/h4&gt;
+&lt;h4 id=&#34;interests&#34;&gt;Interests&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Design Patterns&lt;/li&gt;
@@ -45,7 +142,7 @@
 &lt;li&gt;&lt;a href=&#34;http://developer.android.com/index.html&#34;&gt;Android&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;education:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Education&lt;/h4&gt;
+&lt;h4 id=&#34;education&#34;&gt;Education&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Bachelor of Science&lt;/strong&gt; -&amp;gt; &lt;a href=&#34;http://ycp.edu&#34;&gt;York College of Pennsylvania&lt;/a&gt; May 2016
@@ -57,7 +154,7 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;places-i-ve-worked:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;Places I&amp;rsquo;ve worked&lt;/h4&gt;
+&lt;h4 id=&#34;places-i-ve-worked&#34;&gt;Places I&amp;rsquo;ve worked&lt;/h4&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Software Engineer&lt;/strong&gt; -&amp;gt; &lt;a href=&#34;http://www.dataforma.com&#34;&gt;Dataforma Inc.&lt;/a&gt; May 2014-Present&lt;/li&gt;
@@ -77,31 +174,28 @@
 
 &lt;p&gt;If you would like another piece of functionality implemented, open an &lt;a href=&#34;https://github.com/dmashuda/go-imgur/issues/new&#34;&gt;issue&lt;/a&gt; or implement it yourself and submit a pull request&lt;/p&gt;
 
-&lt;h2 id=&#34;installation:17169e550c700efc4413d99d79848bed&#34;&gt;Installation:&lt;/h2&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;github&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;com&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;dmashuda&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;imgur&lt;/span&gt;     
+
+    go get github.com/dmashuda/go-imgur     
  
-&lt;/pre&gt;&lt;/div&gt;
 
+&lt;h2 id=&#34;example-usage&#34;&gt;Example Usage:&lt;/h2&gt;
 
-&lt;h2 id=&#34;example-usage:17169e550c700efc4413d99d79848bed&#34;&gt;Example Usage:&lt;/h2&gt;
+&lt;h4 id=&#34;creating-a-client&#34;&gt;Creating a Client:&lt;/h4&gt;
 
-&lt;h4 id=&#34;creating-a-client:17169e550c700efc4413d99d79848bed&#34;&gt;Creating a Client:&lt;/h4&gt;
-
-&lt;pre&gt;&lt;code&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #a6e22e&#34;&gt;client&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;imgur&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;NewClient&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;clientID&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;   
+&lt;pre&gt;&lt;code&gt;
+    client := imgur.NewClient(clientID)   
     
-&lt;/pre&gt;&lt;/div&gt;
-
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;em&gt;clientID is issued by imgur on a per application basis&lt;/em&gt;&lt;/p&gt;
 
-&lt;h4 id=&#34;retrieving-album-information:17169e550c700efc4413d99d79848bed&#34;&gt;Retrieving album information:&lt;/h4&gt;
+&lt;h4 id=&#34;retrieving-album-information&#34;&gt;Retrieving album information:&lt;/h4&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #a6e22e&#34;&gt;aww&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;err&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;client&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;GetAlbum&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;/gallery/r/CorgiGifs&amp;quot;&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;0&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;20&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;    
+
+    aww, err := client.GetAlbum(&#34;/gallery/r/CorgiGifs&#34;, 0, 20)    
     
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 </description>
     </item>
     
@@ -117,7 +211,7 @@
 members of the community contribute high quality themes so that those of us
 without a creative bone in our body can generate websites with high visual quality&lt;/p&gt;
 
-&lt;h4 id=&#34;why-a-static-site-generator:32ab7241d48fcc174c877413a917f8cf&#34;&gt;Why a static site generator?&lt;/h4&gt;
+&lt;h4 id=&#34;why-a-static-site-generator&#34;&gt;Why a static site generator?&lt;/h4&gt;
 
 &lt;p&gt;A static site generator has the benefits of a view templating system, but the
 cost of assembly for the template is completed before the site is deployed. This
@@ -151,7 +245,7 @@ so formatting is simple. I statically host my site on &lt;a href=&#34;https://pa
  - If there is an issue open for the feature/improvement/bugfix please mark as a work in progress
  - if there is not an issue for feature/improvement/bugfix please create one and mark as a work in progress&lt;/p&gt;
 
-&lt;h3 id=&#34;configuration:f0eb590cd88eec609acccb193a1e59ef&#34;&gt;Configuration&lt;/h3&gt;
+&lt;h3 id=&#34;configuration&#34;&gt;Configuration&lt;/h3&gt;
 
 &lt;hr /&gt;
 
@@ -208,9 +302,9 @@ GameState are described below:
 
 &lt;p&gt;&lt;img src=&#34;https://raw.githubusercontent.com/awesomegroupidunno/senior-design/master/server.png&#34; alt=&#34;alt text&#34; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&#34;project-information:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Project Information&lt;/h3&gt;
+&lt;h3 id=&#34;project-information&#34;&gt;Project Information&lt;/h3&gt;
 
-&lt;h6 id=&#34;project-contributers:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Project Contributers:&lt;/h6&gt;
+&lt;h6 id=&#34;project-contributers&#34;&gt;Project Contributers:&lt;/h6&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;http://danmashuda.com/about&#34;&gt;Daniel Mashuda&lt;/a&gt;&lt;/li&gt;
@@ -218,24 +312,23 @@ GameState are described below:
 &lt;li&gt;Austin Forry&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h6 id=&#34;install-dependencies:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Install dependencies:&lt;/h6&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;get&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;    
-&lt;/pre&gt;&lt;/div&gt;
+&lt;h6 id=&#34;install-dependencies&#34;&gt;Install dependencies:&lt;/h6&gt;
 
 
-&lt;h6 id=&#34;run-unit-tests:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Run Unit Tests:&lt;/h6&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;test&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;v&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;/...&lt;/span&gt;  
-&lt;/pre&gt;&lt;/div&gt;
+    go get .    
 
 
-&lt;h6 id=&#34;run-server:94142c10613ecc175a9363ff7eb2f45a&#34;&gt;Run Server:&lt;/h6&gt;
+&lt;h6 id=&#34;run-unit-tests&#34;&gt;Run Unit Tests:&lt;/h6&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;    &lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;run&lt;/span&gt; &lt;span style=&#34;color: #a6e22e&#34;&gt;server&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;go&lt;/span&gt;  
+
+    go test -v ./...  
+
+
+&lt;h6 id=&#34;run-server&#34;&gt;Run Server:&lt;/h6&gt;
+
+
+    go run server.go  
     
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
 
 &lt;p&gt;By default, the server listens on port: 10001, this can be configured in the server.go file
 Car combat client implementation is located:  &lt;a href=&#34;https://github.com/awesomegroupidunno/game-client&#34;&gt;here&lt;/a&gt;&lt;/p&gt;
