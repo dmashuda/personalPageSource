@@ -34,7 +34,7 @@ googleAnalytics = ""
   # Section will only be displayed if `content/home/about.md` exists.
   [params.about]
     interests = ["Software Engineering", "Concurrency"]
-    str_interests = "Interests"
+    str_interests = "interests"
     str_education = "Education"
 
 
