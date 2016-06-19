@@ -1,20 +1,113 @@
-baseurl = "http://danmashuda.com"
-languageCode = "en-us"
+baseurl = "http://danmashuda.com/"
 title = "Daniel Mashuda"
-theme = "material-design"
-MetaDataFormat = "yaml"
+copyright = "&copy; 2016 Daniel Mashuda"
+languageCode = "en-us"
+theme = "hugo-academic"
+
+
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
 
 [params]
-    name = "Daniel Mashuda"
-    description = "Thoughts of a Software Engineer" #meta description
-		background = "/images/background.jpg"
-    image = "/images/avatar.jpg" #for frontpage profile card
-    website = "danmashuda.com"
-    email = "dmashuda@ycp.edu"
-    github = "dmashuda"
-		linkedin = "daniel-mashuda-6b857224"
-    copyrightyear = "2015"
-    frontpageposts = 6 #number of post cards to display on frontpage
+  name = "Daniel Mashuda"
+  role = "Software Engineer"
+  organization = "Dataforma Inc"
+  avatar = "avatar.png"
+  email = "dmashuda@ycp.edu"
 
-[permalinks]
-  post = "/:year/:month/:day/:title/" # optional
+  # Date format (refer to Go's date format: http://flippinggodateformat.com )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format = "Mon, Jan 2, 2006"
+
+  # Enable global LaTeX math rendering? If false, you can enable it locally on a per page basis.
+  math = false
+
+  # Enable native social sharing buttons?
+  sharing = true
+
+  # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
+  custom_css = []
+  custom_js  = []
+
+  # Biography section.
+  # Section will only be displayed if `content/home/about.md` exists.
+  [params.about]
+    interests = ["Software Engineering", "Concurrency"]
+    str_interests = "Interests"
+    str_education = "Education"
+
+
+    [[params.about.education]]
+      course = "BS in Computer Science"
+      institution = "York College Of Pennsylvania"
+      year = 2016
+
+
+  # Posts section.
+  # Section will only be displayed if there are posts in `content/post/`.
+  [params.posts]
+    count = 5
+    title = "Recent Posts"
+    subtitle = ""
+    str_all = "More Posts"
+    str_read_more = "Read more"
+
+  # Projects section.
+  # Section will only be displayed if there are projects in `content/project/`.
+  [params.projects]
+    title = "Projects"
+    subtitle = ""
+
+  # Contact section.
+  [params.contact]
+    enable = true
+    title = "Contact"
+    subtitle = ""
+    autolink = true  # Automatically link email and phone?
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fa" includes the following social network icons:
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus, youtube, instagram, soundcloud
+  #   For email icon, use "fa" icon pack, "envelope" icon, and "mailto:your@email.com" as the link.
+  #   Full list: https://fortawesome.github.io/Font-Awesome/icons/
+  #
+  # Icon pack "ai" includes the following academic network icons:
+  #   google-scholar, arxiv, orcid, researchgate, mendeley
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  [[params.social]]
+    icon = "envelope"
+    icon_pack = "fa"
+    link = "mailto:dmashuda@ycp.edu"
+
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fa"
+    link = "//github.com/dmashuda"
+
+
+# Navigation Links
+#   The weight parameter defines the order that the links will appear in.
+
+[[menu.main]]
+  name = "Home"
+  url = "#top"
+  weight = 1
+
+[[menu.main]]
+  name = "Posts"
+  url = "#posts"
+  weight = 3
+
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 4
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 6

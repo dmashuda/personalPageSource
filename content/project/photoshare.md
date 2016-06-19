@@ -27,19 +27,19 @@ Open to pull requests
 ### Configuration
  ----
  - For Storing Photos in an S3 Bucket
-     1. AWS_ACCESS_KEY_ID
-     2. AWS_SECRET_ACCESS_KEY
-     3. S3_BUCKET_NAME
+     - AWS_ACCESS_KEY_ID
+     - AWS_SECRET_ACCESS_KEY
+     - S3_BUCKET_NAME
 
 - Mail Configuration with a gmail account
-  1. GMAIL_DOMAIN
-  2. GMAIL_PASSWORD
-  3. GMAIL_USERNAME
+  - GMAIL_DOMAIN
+  - GMAIL_PASSWORD
+  - GMAIL_USERNAME
 
 - General Rails Configuration
-  1. RACK_ENV
-  2. SECRET_KEY_BASE
-  3. DATABASE_URL
+  - RACK_ENV
+  - SECRET_KEY_BASE
+  - DATABASE_URL
 
 
 
