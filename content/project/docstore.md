@@ -15,50 +15,24 @@ Document(file) Storage abstraction for golang
 
 
 ## Overview
- 1. Single Basic Interface for storing and retrieving documents
- 2. Store and retrieve documents based on keys
- 3. Implementations
-      1. Amazon S3
-      - File system
+ - Single Basic Interface for storing and retrieving documents
+ - Store and retrieve documents based on keys
+ - Implementations
+  - [Amazon S3](https://github.com/docstore/s3storage)
+  - [File system](https://github.com/docstore/service)
 
 ## Getting Started
 
 Installing:  
 ```
- go get github.com/dmashuda/docstore
+ go get github.com/docstore/service
 ```
-
-## Configuring Credentials For AWS
-
-Before using the SDK, ensure that you've configured credentials. The best
-way to configure credentials on a development machine is to use the
-`~/.aws/credentials` file, which might look like:
-
-```
-[default]
-aws_access_key_id = AKID1234567890
-aws_secret_access_key = MY-SECRET-KEY
-```
-
-You can learn more about the credentials file from this
-[blog post](http://blogs.aws.amazon.com/security/post/Tx3D6U6WSFGOK2H/A-New-and-Standardized-Way-to-Manage-Credentials-in-the-AWS-SDKs).
-
-Alternatively, you can set the following environment variables:
-
-```
-AWS_ACCESS_KEY_ID=AKID1234567890
-AWS_SECRET_ACCESS_KEY=MY-SECRET-KEY
-```
-
 
 ## Example
 
 ### Storage Creation
 
 ```
-// Creates new Storer backed by an S3 Bucket
-var storage docstore.Storer = docstore.BasicAws("us-east-1", "dmashuda-dev")
-
 // Creates new Storer backed by a file system
 var storage docstore.Storer = docstore.NewFileStore("/Volumes/storage")
 ```
@@ -69,7 +43,7 @@ var storage docstore.Storer = docstore.NewFileStore("/Volumes/storage")
 file, _ := os.Open(fileName)
 putObj := docstore.CreateObj{
   Identifier: fileName,
-  Body:       file,
+  ReadSeeker: file,
 }
 //store the photo
 //errors ignored
@@ -82,16 +56,17 @@ getObj, _ := storage.Get(fileName)
 
 newFile := os.Create("newFile.jpg")
 defer newFile.Close()
-numBytes, err := io.Copy(newFile, getObj.Body)
+defer getObj.Close()
+numBytes, err := io.Copy(newFile, getObj)
 ```
 
 
 ## Contributing
-https://github.com/dmashuda/docstore/graphs/contributors
+https://github.com/docstore/service/graphs/contributors
  - Pull requests welcome
  - Feel free to add new docstore.Storer Implementations
 
 
 ## License
 
-Released under the [MIT License](https://github.com/jinzhu/gorm/blob/master/License).
+Released under the MIT License
