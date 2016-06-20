@@ -19,7 +19,7 @@ Document(file) Storage abstraction for golang
  - Store and retrieve documents based on keys
  - Implementations
   - [Amazon S3](https://github.com/docstore/s3storage)
-  - [File system](https://github.com/docstore/service)
+  - File system
 
 ## Getting Started
 
@@ -62,7 +62,7 @@ numBytes, err := io.Copy(newFile, getObj)
 
 
 ## Contributing
-https://github.com/docstore/service/graphs/contributors
+https://github.com/docstore/storage/graphs/contributors
  - Pull requests welcome
  - Feel free to add new docstore.Storer Implementations
 
