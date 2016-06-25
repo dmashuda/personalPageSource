@@ -24,7 +24,7 @@ googleAnalytics = ""
   math = false
 
   # Enable native social sharing buttons?
-  sharing = true
+  sharing = false
 
   # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
   custom_css = []
@@ -42,6 +42,7 @@ googleAnalytics = ""
       course = "BS in Computer Science"
       institution = "York College Of Pennsylvania"
       year = 2016
+
 
 
   # Posts section.
@@ -105,6 +106,11 @@ googleAnalytics = ""
 [[menu.main]]
   name = "Projects"
   url = "#projects"
+  weight = 4
+
+[[menu.main]]
+  name = "Mentions"
+  url = "#mentions"
   weight = 4
 
 [[menu.main]]
