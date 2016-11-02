@@ -4,6 +4,27 @@ draft = false
 title = "about"
 section_id = 0
 weight = 0
+
+widget = "about"
+
+
+# List your academic interests.
+[interests]
+  title = "Interests"
+  interests = [
+    "Software Engineering",
+    "Design Patterns",
+    "Concurrency"
+  ]
+
+[education]
+  title = "Education"
+
+[[education.courses]]
+  course = "BS in Computer Science"
+  institution = "York College Of Pennsylvania"
+  year = 2016
+
 +++
 
 # Biography

@@ -3,6 +3,8 @@ title = "Daniel Mashuda"
 copyright = "&copy; 2016 Daniel Mashuda"
 languageCode = "en-us"
 theme = "hugo-academic"
+enableEmoji = true
+
 
 
 # Enable analytics by entering your Google Analytics tracking ID
@@ -29,43 +31,6 @@ googleAnalytics = ""
   # Link custom CSS and JS assets (relative to /static/css and /static/js respectively)
   custom_css = []
   custom_js  = []
-
-  # Biography section.
-  # Section will only be displayed if `content/home/about.md` exists.
-  [params.about]
-    interests = ["Software Engineering", "Concurrency", "Unit Testing", "Design Patterns"]
-    str_interests = "Interests"
-    str_education = "Education"
-
-
-    [[params.about.education]]
-      course = "BS in Computer Science"
-      institution = "York College Of Pennsylvania"
-      year = 2016
-
-
-
-  # Posts section.
-  # Section will only be displayed if there are posts in `content/post/`.
-  [params.posts]
-    count = 5
-    title = "Recent Posts"
-    subtitle = ""
-    str_all = "More Posts"
-    str_read_more = "Read more"
-
-  # Projects section.
-  # Section will only be displayed if there are projects in `content/project/`.
-  [params.projects]
-    title = "Open Source Projects"
-    subtitle = ""
-
-  # Contact section.
-  [params.contact]
-    enable = true
-    title = "Contact"
-    subtitle = ""
-    autolink = true  # Automatically link email and phone?
 
   # Social/Academic Networking
   #
@@ -112,8 +77,3 @@ googleAnalytics = ""
   name = "Mentions"
   url = "#mentions"
   weight = 4
-
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 6
