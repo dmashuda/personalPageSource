@@ -2,6 +2,7 @@
 title: "Docstore"
 date: "2016-06-16"
 description: "Document(file) Storage abstraction for golang"
+external_link: "https://github.com/docstore/storage"
 categories:
   - "project"
 tags:
