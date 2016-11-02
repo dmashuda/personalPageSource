@@ -33,8 +33,8 @@ googleAnalytics = ""
   # Biography section.
   # Section will only be displayed if `content/home/about.md` exists.
   [params.about]
-    interests = ["Software Engineering", "Concurrency"]
-    str_interests = "interests"
+    interests = ["Software Engineering", "Concurrency", "Unit Testing", "Design Patterns"]
+    str_interests = "Interests"
     str_education = "Education"
 
 
@@ -57,7 +57,7 @@ googleAnalytics = ""
   # Projects section.
   # Section will only be displayed if there are projects in `content/project/`.
   [params.projects]
-    title = "Projects"
+    title = "Open Source Projects"
     subtitle = ""
 
   # Contact section.
