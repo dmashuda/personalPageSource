@@ -3,7 +3,7 @@ date = "2016-06-18T00:00:00"
 draft = false
 title = "about"
 section_id = 0
-weight = 0
+weight = 1
 
 widget = "about"
 
