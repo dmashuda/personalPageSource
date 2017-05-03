@@ -14,7 +14,9 @@ widget = "about"
   interests = [
     "Software Engineering",
     "Design Patterns",
+    "Testing",
     "Concurrency"
+
   ]
 
 [education]
@@ -31,4 +33,4 @@ widget = "about"
 
 Daniel Mashuda
 
-I enjoy learning about design paradigms, technologies, and programming languages. I believe that a good Software Engineer knows the strengths/weaknesses of the these things and picks the right tools for the job. When the only thing that you have is a hammer, everything looks like a nail.
+I am Software Engineer who is passionate about high quality, well designed, and efficiently implemented software. I am always excited learn anything that has to do with computer science, and love to solve challenging problems.
