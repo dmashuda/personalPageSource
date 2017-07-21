@@ -1,5 +1,5 @@
 +++
-date = "2016-03-08T00:00:00"
+date = "2017-07-19T00:00:00"
 draft = false
 title = "An Introduction to Unit Testing"
 section_id = 0
@@ -9,5 +9,44 @@ section_id = 0
 Automated Software Testing is a discipline that every person who writes code professionally should practice. I will not argue the merits of testing here, because plenty of other people make very convincing arguments.
 
 
-### Select A Tool:
- There is a variety of testing frameworks that are offered for the different languages and frameworks that are used software engineers.
+## Select A Tool:
+ There are a variety of testing frameworks that are offered for the different languages and frameworks that are used software engineers.
+
+ - [JUnit] (http://junit.org/junit4/)  for Jvm languages
+ - [Minitest](https://github.com/seattlerb/minitest) for Ruby
+ - [Go Test](https://golang.org/pkg/testing/) for Go
+
+ Each of these libraries/frameworks provides a functionality to create tests, run tests, and make assertions
+
+
+## 3 Steps of a Test:
+
+### 1 Arrange
+
+Arrange is the step to create/load test data and create the conditions
+
+### 2 Act
+
+Act is the step where the code that is under test is executed.
+
+### 3 Assert
+
+Assert is the step where the result or side-effect of the code is checked
+
+
+
+## Simple Example
+
+```java
+public class CalculatorTest{
+
+  @Test
+  public void calculatorAddTwoNumbers() {
+    Calculator calculator = new Calculator();
+
+    Integer result = calculator.add(5, 7)
+    assertEquals("Result", 12, result);
+  }
+}
+
+```
