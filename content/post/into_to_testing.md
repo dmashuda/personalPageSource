@@ -9,7 +9,7 @@ section_id = 0
 Automated Software Testing is a discipline that every person who writes code professionally should practice. I will not argue the merits of testing here, because plenty of other people make very convincing arguments.
 
 
-## Select A Tool:
+## Tools:
  There are a variety of testing frameworks that are offered for the different languages and frameworks that are used software engineers.
 
  - [JUnit] (http://junit.org/junit4/)  for Jvm languages
@@ -68,14 +68,20 @@ In this example we are testing a `Person` ActiveRecord object that should requir
 class PersonTest < ActiveSupport::TestCase
 
   test 'Empty person should not save' do
+    # Arrange
     person = Person.new
+
+    # Act and Assert on same line
     assert_not person.save
   end
 
   test 'Person with first and maiden name should save' do
+    #Arrange
     person = Person.new(first_name: 'test', maiden_name: 'person')
 
+    # Act and Assert on same line
     assert person.save
+    # Multiple assertions
     assert_equal 'test', person[:first_name]
     assert_equal 'person', person[:maiden_name]
   end
